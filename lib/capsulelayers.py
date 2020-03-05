@@ -18,7 +18,7 @@ import keras.backend as K
 from keras import initializers
 from keras.layers import Layer
 
-from .utils import register_keras_custom_object
+from utils import register_keras_custom_object
 
 
 def batch_dot(x, y, axes=None):

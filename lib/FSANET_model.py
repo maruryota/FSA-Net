@@ -22,12 +22,12 @@ from keras.layers import BatchNormalization
 
 from keras import backend as K
 
-from .capsulelayers import CapsuleLayer
-from .capsulelayers import MatMulLayer
+from capsulelayers import CapsuleLayer
+from capsulelayers import MatMulLayer
 
-from .loupe_keras import NetVLAD
+from loupe_keras import NetVLAD
 
-from .utils import register_keras_custom_object
+from utils import register_keras_custom_object
 
 sys.setrecursionlimit(2 ** 20)
 np.random.seed(2 ** 10)

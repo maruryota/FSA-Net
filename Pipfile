@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+bokeh = "*"
+dask = "==2.11.0"
+distributed = "==2.11.0"
+intake = "*"
+jupyterlab = "*"
+matplotlib = "*"
+pandas = "==0.25.3"
+imageio = "*"
+opencv-python = "==4.1.2.30"
+opencv-contrib-python = "==4.1.2.30"
+numpy = "==1.17.2"
+scikit-image = "*"
+s3fs = "*"
+intake-parquet = "*"
+imageio-ffmpeg = "*"
+framania = {git = "https://github.com/archiba/framania.git"}
+dask-video = {git = "https://higumachan:ab82f42b2a8f82791e0daa0581902bfe0905b6fc@github.com/kiconiaworks/dask-video.git"}
+tensorflow = "==1.15"
+keras = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+install_dask = "pip install python-snappy"
