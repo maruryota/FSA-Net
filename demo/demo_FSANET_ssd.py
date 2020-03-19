@@ -85,7 +85,7 @@ def draw_results_ssd(detected,input_img,faces,ad,img_size,img_w,img_h,model,time
                 
                 input_img[yw1:yw2 + 1, xw1:xw2 + 1, :] = img
                 
-    cv2.imshow("result", input_img)
+#     cv2.imshow("result", input_img)
     
     return input_img #,time_network,time_plot
 
@@ -162,7 +162,7 @@ def main():
     net = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
 
     # capture video
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("movie/test_movie.mov")
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1024*1)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 768*1)
     
@@ -176,6 +176,8 @@ def main():
         ret, input_img = cap.read()
 
         img_idx = img_idx + 1
+        if len(np.shape(input_img)) == 0:
+            break
         img_h, img_w, _ = np.shape(input_img)
 
         
@@ -210,7 +212,7 @@ def main():
         if detected.shape[2] > detected_pre.shape[2] or img_idx%(skip_frame*3) == 0:
             detected_pre = detected
 
-        key = cv2.waitKey(1)
+#         key = cv2.waitKey(1)
         
 if __name__ == '__main__':
     main()

@@ -12,11 +12,8 @@ Antoine Miech, Ivan Laptev, Josef Sivic
 """
 import math
 import tensorflow as tf
-import tensorflow.contrib.slim as slim
-import numpy as np
 from keras import initializers, layers
 import keras.backend as K
-import sys
 
 
 # Keras version
